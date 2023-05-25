@@ -33,9 +33,11 @@ A voucher pool is a collection of voucher codes that can be used by customers to
 * [ ] Design a database schema
 * [ ] Write an application
 * [ ] API endpoint for verifying and redeeming vouchers
+* [ ] Implement API Rate Limiting: Protect the API from abuse by implementing rate limiting on the endpoints.
+* [ ] Use Database Transactions: Ensure data consistency by implementing use of transactions in your application.
 * [ ] Write unit tests
+* [ ] Using Typescript
 * [ ] A nice little Readme on how to run
-* [ ] ***PLUS POINT:*** Using Typescript
 * [ ] ***PLUS POINT:*** Writing swagger for the API
 * [ ] ***PLUS POINT:*** Docker file to setup the whole application with all the dependencies (database, nodejs)
 
