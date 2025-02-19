@@ -1,0 +1,48 @@
+# version: '3'
+# services:
+#   db:
+#     image: postgres
+#     environment:
+#       POSTGRES_USER: postgres
+#       POSTGRES_PASSWORD: password
+#       POSTGRES_DB: voucher_pool
+#     ports:
+#       - '5432:5432'
+#   app:
+#     build: .
+#     ports:
+#       - '3000:3000'
+#     depends_on:
+#       - db
+#     environment:
+#       DATABASE_HOST: db
+#       DATABASE_PORT: 5432
+#       DATABASE_USER: postgres
+#       DATABASE_PASSWORD: password
+#       DATABASE_NAME: voucher_pool
+
+services:
+  app:
+    build: .
+    container_name: nestjs_app
+    restart: always
+    # env_file: .env
+    environment:
+      - SUPABASE_URL=https://rwncmxkblyditehcpxlj.supabase.co
+      - SUPABASE_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJ3bmNteGtibHlkaXRlaGNweGxqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Mzk4MDE2NzQsImV4cCI6MjA1NTM3NzY3NH0.A2Nc2E6DRGzi1ntKJaGnQTk2VnJvdHBuhrqqLnIiKZE
+      - SUPABASE_HOST=db.rwncmxkblyditehcpxlj.supabase.co
+      - SUPABASE_PORT=5432
+      - SUPABASE_USER=postgres
+      - SUPABASE_PASSWORD=cHSFuod35%4
+      - SUPABASE_DB=postgres
+
+    ports:
+      - '3000:3000'
+    networks:
+      - app_network
+
+networks:
+  app_network:
+
+volumes:
+  db_data:

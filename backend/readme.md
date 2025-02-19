@@ -44,3 +44,36 @@ A voucher pool is a collection of voucher codes that can be used by customers to
 
 >  Focus on code quality
 > No need for access control think of it as an internal application
+
+# Running the Project with Docker
+
+## Prerequisites
+- Ensure you have [Docker](https://www.docker.com/get-started) installed.
+- Ensure you have [Docker Compose](https://docs.docker.com/compose/install/) installed.
+
+## Steps to Run
+1. Clone the repository:
+   ```sh
+   git clone <repo-url>
+   cd <repo-folder>
+   ```
+
+2. Start the application using Docker Compose:
+   ```sh
+   docker-compose up --build
+   ```
+
+3. The API should now be available at:
+   ```
+   http://localhost:3000
+   ```
+
+## Stopping the Containers
+To stop the running services:
+```sh
+docker-compose down
+```
+
+## Environment Variables
+The `.env` file is not required, as all variables are injected via Docker.
+
